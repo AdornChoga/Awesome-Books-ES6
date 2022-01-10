@@ -2,12 +2,22 @@ import displayLibrary from './modules/display-books.js';
 import manipulateBooks from './modules/edit-library.js';
 import navigation from './modules/navigations.js';
 import booksData from './modules/books-data.js';
+import {DateTime} from './modules/luxon/src/luxon.js';
 
 const addButton = document.querySelector('#add');
 const listContainer = document.querySelector('.books');
 const list = document.querySelector('#list');
 const goAddBook = document.querySelector('#add-book');
 const contact = document.querySelector('#contact');
+const date = document.querySelector('#date');
+
+function displayDate() {
+  const dt = DateTime.now();
+  date.innerHTML = dt.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS)
+}
+
+setInterval(displayDate, 1000)
+
 
 window.addEventListener('load', () => {
   list.classList.add('list');
