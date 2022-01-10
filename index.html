@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>Awesome Books</h2>
+            <ul class="nav-links">
+               <li><button id="list" type="button">List</button></li>
+               <li><button id="add-book" type="button">Add Book</button></li>
+               <li><button id="contact" type="button">Contact</button></li>
+            </ul>
+        </nav>
+   </header>
+    <main>
+        <p id="date"></p>
+
+        <section class="books-container">
+            <h1>Awesome books</h1>
+            <ul class="books">
+                <!-- books are added dynamically here using JavaScript -->
+            </ul> 
+        </section>  
+    
+        <section class="input-field">
+            <form>
+                <h1>Add a new book</h1>
+                <input id="title" type="text" maxlength="30" name="title" placeholder="Title" required/>
+                <input id="author" type="text" maxlength="30" name="author" placeholder="Author" required />
+                <button id="add" name="add" type="button">Add</button>
+            </form>
+        </section>
+
+        <section class="contact-info">
+            <div>
+                <h1>Contact Information</h1>
+                <p>Do you have any questions or you just want say "Hello"?</p>
+                <p id="reach-out">You can reach out to us!</p>
+                <ul>
+                  <li>Our e-mail: main@mail.com</li>
+                  <li>Our phone: 004658337339</li>
+                  <li>Our address: Streetname 22, 3455 City, Country</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright</p>
+     </footer>
+    <script src="books.js"></script>
+</body>
+</html>
