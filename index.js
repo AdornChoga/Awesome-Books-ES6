@@ -11,7 +11,7 @@ const goAddBook = document.querySelector('#add-book');
 const contact = document.querySelector('#contact');
 const date = document.querySelector('#date');
 
-function displayDate() {
+let displayDate = () => {
   const dt = DateTime.now();
   date.innerHTML = dt.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
 }
