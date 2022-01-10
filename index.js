@@ -1,18 +1,14 @@
 import {displayLibrary} from "./modules/display-books.js";
-import {manipulateBooks} from "./modules/edit-library";
+import {manipulateBooks} from "./modules/edit-library.js";
 import {navigation} from "./modules/navigations.js";
 import {booksData} from "./modules/books-data.js";
 
 let addButton = document.querySelector('#add');
 let listContainer = document.querySelector('.books');
-let bookAuthor = document.querySelector('#author');
-let bookTitle = document.querySelector('#title');
 let list = document.querySelector('#list');
 let goAddBook = document.querySelector('#add-book');
 let contact = document.querySelector('#contact');
-let booksContainer = document.querySelector('.books-container');
-let inputField = document.querySelector('.input-field');
-let contactInfo = document.querySelector('.contact-info');
+
 
 window.addEventListener('load', () => {
   list.classList.add('list');

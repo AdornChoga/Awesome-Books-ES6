@@ -1,3 +1,7 @@
+import {booksData} from './books-data.js'
+
+let listContainer = document.querySelector('.books')
+
 class displayLibrary {
   static loadBooks() {
     listContainer.innerHTML = '';

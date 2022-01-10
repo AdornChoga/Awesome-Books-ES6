@@ -1,3 +1,8 @@
+import {booksData} from "./books-data.js";
+
+let bookAuthor = document.querySelector('#author');
+let bookTitle = document.querySelector('#title');
+
 class manipulateBooks {
   static removeBook(e) {
     if (e.target.classList.value === 'remove') {

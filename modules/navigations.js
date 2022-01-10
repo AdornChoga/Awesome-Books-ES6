@@ -1,3 +1,10 @@
+let booksContainer = document.querySelector('.books-container');
+let goAddBook = document.querySelector('#add-book');
+let contact = document.querySelector('#contact');
+
+let inputField = document.querySelector('.input-field');
+let contactInfo = document.querySelector('.contact-info');
+
 class navigation{
   static showList() {
     booksContainer.style.display = 'flex';
