@@ -2,7 +2,7 @@ import displayLibrary from './modules/display-books.js';
 import manipulateBooks from './modules/edit-library.js';
 import navigation from './modules/navigations.js';
 import booksData from './modules/books-data.js';
-import { DateTime } from '../node_modules/luxon/src/luxon.js';
+import { DateTime } from './node_modules/luxon/src/luxon.js';
 
 const addButton = document.querySelector('#add');
 const listContainer = document.querySelector('.books');
