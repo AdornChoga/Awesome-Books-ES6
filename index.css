@@ -1,0 +1,180 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header {
+  background-color: grey;
+  border: solid;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  padding: 0 3em;
+}
+
+.books li {
+  border: solid red;
+  max-width: 100%;
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  padding: 0 2em;
+}
+
+.nav-links li + li {
+  border-left: 2px solid black;
+}
+
+.list,
+.add-book,
+.contact {
+  color: blue;
+}
+
+main {
+  margin-top: 5rem;
+}
+
+#date {
+  text-align: right;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.books-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+
+.books {
+  list-style-type: none;
+  padding: 0;
+  width: 80%;
+}
+
+.books li:nth-child(odd) {
+  background-color: rgba(0, 0, 139, 0.75);
+}
+
+.books li:nth-child(even) {
+  background-color: rgba(128, 0, 128, 0.75);
+}
+
+.remove {
+  display: block;
+  align-self: center;
+  border: 2px solid rgba(128, 0, 128, 0.76);
+  position: absolute;
+  right: 1rem;
+  padding: 0.6em;
+  box-shadow: 0.4rem 0.4rem 0.2rem black;
+  font-weight: bold;
+}
+
+.books li:nth-child(odd) .remove {
+  border: 2px solid rgba(128, 0, 128, 0.75);
+}
+
+.books li:nth-child(even) .remove {
+  border: 2px solid rgba(0, 0, 139, 0.75);
+}
+
+footer p {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-left: 2em;
+}
+
+.books li p {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.books li p + p {
+  margin-left: 0.5rem;
+}
+
+.input-field {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 17em;
+}
+
+form input {
+  margin-bottom: 2.5rem;
+  padding: 0.8em;
+  width: 100%;
+  border: 0.2rem solid rgba(0, 0, 139, 0.75);
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+form button {
+  align-self: flex-end;
+  border: 0.2rem solid rgba(0, 0, 139, 0.75);
+  border-radius: 0.5rem;
+  padding: 0.6em 1.4em;
+  box-shadow: 0.4rem 0.4rem 0.2rem black;
+  font-weight: bold;
+}
+
+.contact-info {
+  display: none;
+  font-size: 1.9rem;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 8.9em;
+}
+
+#reach-out {
+  padding-left: 0.3em;
+}
+
+footer {
+  background-color: grey;
+  border: 0.2rem solid black;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
