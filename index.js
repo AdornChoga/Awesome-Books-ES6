@@ -1,4 +1,7 @@
-
+import {displayLibrary} from "./modules/display-books.js";
+import {manipulateBooks} from "./modules/edit-library";
+import {navigation} from "./modules/navigations.js";
+import {booksData} from "./modules/books-data.js";
 
 let addButton = document.querySelector('#add');
 let listContainer = document.querySelector('.books');
