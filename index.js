@@ -11,10 +11,10 @@ const goAddBook = document.querySelector('#add-book');
 const contact = document.querySelector('#contact');
 const date = document.querySelector('#date');
 
-let displayDate = () => {
+const displayDate = () => {
   const dt = DateTime.now();
   date.innerHTML = dt.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
-}
+};
 
 setInterval(displayDate, 1000);
 
