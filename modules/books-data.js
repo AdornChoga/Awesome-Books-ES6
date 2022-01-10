@@ -1,11 +1,9 @@
-class booksData {
+export default class booksData {
   static fetchData() {
-    return JSON.parse(localStorage.getItem('books'))
+    return JSON.parse(localStorage.getItem('books'));
   }
 
   static updateData(data) {
-    localStorage.setItem('books', JSON.stringify(data))
+    localStorage.setItem('books', JSON.stringify(data));
   }
 }
-
-export {booksData}

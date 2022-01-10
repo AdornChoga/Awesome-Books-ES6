@@ -1,21 +1,20 @@
-import {displayLibrary} from "./modules/display-books.js";
-import {manipulateBooks} from "./modules/edit-library.js";
-import {navigation} from "./modules/navigations.js";
-import {booksData} from "./modules/books-data.js";
+import displayLibrary from './modules/display-books.js';
+import manipulateBooks from './modules/edit-library.js';
+import navigation from './modules/navigations.js';
+import booksData from './modules/books-data.js';
 
-let addButton = document.querySelector('#add');
-let listContainer = document.querySelector('.books');
-let list = document.querySelector('#list');
-let goAddBook = document.querySelector('#add-book');
-let contact = document.querySelector('#contact');
-
+const addButton = document.querySelector('#add');
+const listContainer = document.querySelector('.books');
+const list = document.querySelector('#list');
+const goAddBook = document.querySelector('#add-book');
+const contact = document.querySelector('#contact');
 
 window.addEventListener('load', () => {
   list.classList.add('list');
   if (localStorage.getItem('books') === null) {
-    booksData.updateData([])
+    booksData.updateData([]);
   }
-  displayLibrary.loadBooks()
+  displayLibrary.loadBooks();
 });
 
 addButton.addEventListener('click', () => {
@@ -36,4 +35,3 @@ listContainer.addEventListener('click', (event) => {
   manipulateBooks.removeBook(event);
   displayLibrary.loadBooks();
 });
-

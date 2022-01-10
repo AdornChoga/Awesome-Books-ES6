@@ -1,9 +1,9 @@
-import {booksData} from "./books-data.js";
+import booksData from './books-data.js';
 
-let bookAuthor = document.querySelector('#author');
-let bookTitle = document.querySelector('#title');
+const bookAuthor = document.querySelector('#author');
+const bookTitle = document.querySelector('#title');
 
-class manipulateBooks {
+export default class manipulateBooks {
   static removeBook(e) {
     if (e.target.classList.value === 'remove') {
       const id = Number(e.target.id);
@@ -20,7 +20,7 @@ class manipulateBooks {
 
   static addBook() {
     if (localStorage.getItem('books') === null) {
-      booksData.updateData([])
+      booksData.updateData([]);
     }
     if (bookAuthor.value !== '' && bookTitle.value !== '') {
       const newBooks = booksData.fetchData();
@@ -32,5 +32,3 @@ class manipulateBooks {
     }
   }
 }
-
-export {manipulateBooks};

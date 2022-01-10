@@ -1,11 +1,11 @@
-let booksContainer = document.querySelector('.books-container');
-let goAddBook = document.querySelector('#add-book');
-let contact = document.querySelector('#contact');
+const booksContainer = document.querySelector('.books-container');
+const goAddBook = document.querySelector('#add-book');
+const contact = document.querySelector('#contact');
+const list = document.querySelector('#list');
+const inputField = document.querySelector('.input-field');
+const contactInfo = document.querySelector('.contact-info');
 
-let inputField = document.querySelector('.input-field');
-let contactInfo = document.querySelector('.contact-info');
-
-class navigation{
+export default class navigation {
   static showList() {
     booksContainer.style.display = 'flex';
     inputField.style.display = 'none';
@@ -33,5 +33,3 @@ class navigation{
     list.classList.remove('list');
   }
 }
-
-export {navigation}

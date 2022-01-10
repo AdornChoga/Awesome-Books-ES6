@@ -1,8 +1,8 @@
-import {booksData} from './books-data.js'
+import booksData from './books-data.js';
 
-let listContainer = document.querySelector('.books')
+const listContainer = document.querySelector('.books');
 
-class displayLibrary {
+export default class displayLibrary {
   static loadBooks() {
     listContainer.innerHTML = '';
     const localBooks = booksData.fetchData();
@@ -17,5 +17,3 @@ class displayLibrary {
     }
   }
 }
-
-export {displayLibrary}
