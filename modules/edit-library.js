@@ -2,6 +2,7 @@ import booksData from './books-data.js';
 
 const bookAuthor = document.querySelector('#author');
 const bookTitle = document.querySelector('#title');
+const addedMsg = document.querySelector('.book-added-msg');
 
 export default class manipulateBooks {
   static removeBook(e) {
@@ -29,6 +30,8 @@ export default class manipulateBooks {
       booksData.updateData(newBooks);
       bookAuthor.value = '';
       bookTitle.value = '';
+      setTimeout(() => { addedMsg.style.display = 'block'; }, 300);
+      setTimeout(() => { addedMsg.style.display = 'none'; }, 1500);
     }
   }
 }

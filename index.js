@@ -12,6 +12,8 @@ const contact = document.querySelector('#contact');
 const date = document.querySelector('#date');
 const emptyMessage = document.querySelector('.empty-message');
 const goToAddPage = document.querySelector('.add-message');
+const bookAuthor = document.querySelector('#author');
+const bookTitle = document.querySelector('#title');
 
 const displayDate = () => {
   const dt = DateTime.now();
@@ -28,6 +30,13 @@ function libraryMessage() {
 
 function mouseChange(e) {
   e.style.cursor = 'pointer';
+}
+
+function keyUp(e) {
+  if (e.keyCode === 13) {
+    e.preventDefault();
+    addButton.click();
+  }
 }
 
 libraryMessage();
@@ -48,14 +57,25 @@ addButton.addEventListener('click', () => {
   displayLibrary.loadBooks();
   libraryMessage();
 });
+
+bookAuthor.addEventListener('keyup', (event) => {
+  keyUp(event);
+});
+
+bookTitle.addEventListener('keyup', (event) => {
+  keyUp(event);
+});
+
 list.addEventListener('click', () => {
   navigation.showList();
   libraryMessage();
 });
+
 goAddBook.addEventListener('click', () => {
   navigation.showAddBook();
   libraryMessage();
 });
+
 contact.addEventListener('click', () => {
   navigation.showContactInfo();
   libraryMessage();
@@ -85,4 +105,14 @@ contact.addEventListener('mouseover', (event) => {
 });
 goAddBook.addEventListener('mouseover', (event) => {
   mouseChange(event.target);
+});
+
+addButton.addEventListener('mouseover', (event) => {
+  mouseChange(event.target);
+});
+
+listContainer.addEventListener('mouseover', (event) => {
+  if (event.target.classList.contains('remove')) {
+    mouseChange(event.target);
+  }
 });
