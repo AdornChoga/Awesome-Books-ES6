@@ -37,12 +37,12 @@ nav {
 }
 
 form button {
-  align-self: flex-end;
   border: 0.2rem solid rgba(0, 0, 139, 0.75);
   border-radius: 0.5rem;
-  padding: 0.6em 1.4em;
+  padding: 0.4em 1.4em;
   box-shadow: 0.4rem 0.4rem 0.2rem black;
   font-weight: bold;
+  font-size: 1.7rem;
 }
 
 .nav-links button {
@@ -184,7 +184,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 17em;
+
 }
 
 form input {
@@ -196,6 +196,13 @@ form input {
   outline: none;
 }
 
+.book-added-msg {
+  font-size: 2rem;
+  font-style: italic;
+  color: blue;
+  margin-bottom: 1rem;
+  display: none;
+}
 .contact-info {
   display: none;
   font-size: 1.9rem;

@@ -21,7 +21,7 @@
     <main>
         <p id="date"></p>
         <section class="books-container">
-            <h1>Awesome books</h1>
+            <h1>Personal Library</h1>
             <div class="empty-message">
                 <p>Your Library Is Empty</p>
                 <button type="button" class="add-message">Add A Book</button>
@@ -32,9 +32,10 @@
         <section class="input-field">
             <form>
                 <h1>Add a new book</h1>
-                <input id="title" type="text" maxlength="30" name="title" placeholder="Title" required/>
-                <input id="author" type="text" maxlength="30" name="author" placeholder="Author" required />
-                <button id="add" name="add" type="button">Add</button>
+                <input id="title" type="text" maxlength="30" name="title" placeholder="Title" autocomplete="off" />
+                <input id="author" type="text" maxlength="30" name="author" placeholder="Author" autocomplete="off" />
+                <span class="book-added-msg">Book added successfully!</span>
+                <button id="add" name="add" type="button">Add Book</button>
             </form>
         </section>
         <section class="contact-info">
@@ -51,7 +52,7 @@
         </section>
     </main>
     <footer>
-        <p>Copyright &nbsp; Adorn Choga &copy; 2022</p>
+        <p>Adorn Choga &copy; 2022</p>
      </footer>
     <script type="module" src="index.js"></script>
 </body>
