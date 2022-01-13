@@ -26,6 +26,10 @@ function libraryMessage() {
   }
 }
 
+function mouseChange(e) {
+  e.style.cursor = 'pointer';
+}
+
 libraryMessage()
 
 setInterval(displayDate, 1000);
@@ -69,6 +73,17 @@ goToAddPage.addEventListener('click', () => {
   libraryMessage()
 })
 
-goToAddPage.addEventListener('mouseover', () => {
-  goToAddPage.style.cursor = 'pointer';
+goToAddPage.addEventListener('mouseover', (event) => {
+  mouseChange(event.target);
+})
+
+list.addEventListener('mouseover', (event) => {
+  mouseChange(event.target);
+})
+
+contact.addEventListener('mouseover', (event) => {
+  mouseChange(event.target);
+})
+goAddBook.addEventListener('mouseover', (event) => {
+  mouseChange(event.target);
 })
