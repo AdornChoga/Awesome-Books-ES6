@@ -11,18 +11,20 @@ body {
 }
 
 header {
-  background-color: grey;
+  background-color: darkblue;
   border: solid;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1;
+  color: white;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .nav-links {
@@ -32,6 +34,23 @@ nav {
 
 .nav-links li {
   padding: 0 3em;
+}
+
+form button {
+  align-self: flex-end;
+  border: 0.2rem solid rgba(0, 0, 139, 0.75);
+  border-radius: 0.5rem;
+  padding: 0.6em 1.4em;
+  box-shadow: 0.4rem 0.4rem 0.2rem black;
+  font-weight: bold;
+}
+
+.nav-links button {
+  background-color: darkblue;
+  color: white;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: bold;
 }
 
 .books li {
@@ -47,17 +66,17 @@ nav {
 }
 
 .nav-links li + li {
-  border-left: 2px solid black;
+  border-left: 2px solid white;
 }
 
 .list,
 .add-book,
 .contact {
-  color: blue;
+  text-decoration: underline red 4px;
 }
 
 main {
-  margin-top: 5rem;
+  margin-top: 7rem;
 }
 
 #date {
@@ -68,6 +87,34 @@ main {
 
 h1 {
   font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-left: 2em;
+}
+
+.empty-message {
+  border: 2px solid rgba(0, 0, 139, 0.75);
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 0.5em;
+  border-radius: 1rem;
+  background-color: purple;
+  color: white;
+  display: none;
+}
+
+.add-message {
+  text-align: center;
+  color: rgba(0, 0, 139, 0.75);
+  text-decoration: underline black;
+  background-color: purple;
+  border: none;
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: bold;
 }
 
 .books-container {
@@ -149,15 +196,6 @@ form input {
   outline: none;
 }
 
-form button {
-  align-self: flex-end;
-  border: 0.2rem solid rgba(0, 0, 139, 0.75);
-  border-radius: 0.5rem;
-  padding: 0.6em 1.4em;
-  box-shadow: 0.4rem 0.4rem 0.2rem black;
-  font-weight: bold;
-}
-
 .contact-info {
   display: none;
   font-size: 1.9rem;
@@ -171,10 +209,11 @@ form button {
 }
 
 footer {
-  background-color: grey;
+  background-color: darkblue;
   border: 0.2rem solid black;
   position: fixed;
   width: 100%;
   bottom: 0;
   left: 0;
+  color: white;
 }
