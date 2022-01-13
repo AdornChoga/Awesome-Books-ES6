@@ -36,6 +36,15 @@ nav {
   padding: 0 3em;
 }
 
+form button {
+  align-self: flex-end;
+  border: 0.2rem solid rgba(0, 0, 139, 0.75);
+  border-radius: 0.5rem;
+  padding: 0.6em 1.4em;
+  box-shadow: 0.4rem 0.4rem 0.2rem black;
+  font-weight: bold;
+}
+
 .nav-links button {
   background-color: darkblue;
   color: white;
@@ -81,7 +90,7 @@ h1 {
 }
 
 h2 {
-  font-size:2rem;
+  font-size: 2rem;
   padding-left: 2em;
 }
 
@@ -99,7 +108,7 @@ h2 {
 
 .add-message {
   text-align: center;
-  color:rgba(0, 0, 139, 0.75);
+  color: rgba(0, 0, 139, 0.75);
   text-decoration: underline black;
   background-color: purple;
   border: none;
@@ -107,8 +116,6 @@ h2 {
   font-family: sans-serif;
   font-weight: bold;
 }
-
-
 
 .books-container {
   display: flex;
@@ -187,15 +194,6 @@ form input {
   border: 0.2rem solid rgba(0, 0, 139, 0.75);
   border-radius: 0.5rem;
   outline: none;
-}
-
-form button {
-  align-self: flex-end;
-  border: 0.2rem solid rgba(0, 0, 139, 0.75);
-  border-radius: 0.5rem;
-  padding: 0.6em 1.4em;
-  box-shadow: 0.4rem 0.4rem 0.2rem black;
-  font-weight: bold;
 }
 
 .contact-info {
