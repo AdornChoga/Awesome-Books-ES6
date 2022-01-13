@@ -70,6 +70,31 @@ h1 {
   font-size: 4rem;
 }
 
+.empty-message {
+  border: 2px solid rgba(0, 0, 139, 0.75);
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 0.5em;
+  border-radius: 1rem;
+  background-color: purple;
+  color: white;
+  display: none;
+}
+
+.add-message {
+  text-align: center;
+  color:rgba(0, 0, 139, 0.75);
+  text-decoration: underline black;
+  background-color: purple;
+  border: none;
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+
+
 .books-container {
   display: flex;
   flex-direction: column;

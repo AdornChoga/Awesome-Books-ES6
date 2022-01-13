@@ -10,11 +10,23 @@ const list = document.querySelector('#list');
 const goAddBook = document.querySelector('#add-book');
 const contact = document.querySelector('#contact');
 const date = document.querySelector('#date');
+const emptyMessage = document.querySelector('.empty-message');
+const goToAddPage = document.querySelector('.add-message');
 
 const displayDate = () => {
   const dt = DateTime.now();
   date.innerHTML = dt.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
 };
+
+function libraryMessage() {
+  if(booksData.fetchData().length === 0) {
+    emptyMessage.style.display = 'block';
+  } else {
+    emptyMessage.style.display = 'none';
+  }
+}
+
+libraryMessage()
 
 setInterval(displayDate, 1000);
 
@@ -24,23 +36,39 @@ window.addEventListener('load', () => {
     booksData.updateData([]);
   }
   displayLibrary.loadBooks();
+  libraryMessage()
 });
 
 addButton.addEventListener('click', () => {
   manipulateBooks.addBook();
   displayLibrary.loadBooks();
+  libraryMessage()
 });
 list.addEventListener('click', () => {
   navigation.showList();
+  libraryMessage()
+
 });
 goAddBook.addEventListener('click', () => {
   navigation.showAddBook();
+  libraryMessage()
 });
 contact.addEventListener('click', () => {
   navigation.showContactInfo();
+  libraryMessage()
 });
 
 listContainer.addEventListener('click', (event) => {
   manipulateBooks.removeBook(event);
   displayLibrary.loadBooks();
+  libraryMessage()
 });
+
+goToAddPage.addEventListener('click', () => {
+  navigation.showAddBook();
+  libraryMessage()
+})
+
+goToAddPage.addEventListener('mouseover', () => {
+  goToAddPage.style.cursor = 'pointer';
+})
