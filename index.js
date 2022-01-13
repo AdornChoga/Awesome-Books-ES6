@@ -33,7 +33,7 @@ function mouseChange(e) {
 }
 
 function keyUp(e) {
-  if(e.keyCode === 13) {
+  if (e.keyCode === 13) {
     e.preventDefault();
     addButton.click();
   }
@@ -59,12 +59,12 @@ addButton.addEventListener('click', () => {
 });
 
 bookAuthor.addEventListener('keyup', (event) => {
-  keyUp(event)
-})
+  keyUp(event);
+});
 
 bookTitle.addEventListener('keyup', (event) => {
-  keyUp(event)
-})
+  keyUp(event);
+});
 
 list.addEventListener('click', () => {
   navigation.showList();
@@ -112,7 +112,7 @@ addButton.addEventListener('mouseover', (event) => {
 });
 
 listContainer.addEventListener('mouseover', (event) => {
-  if(event.target.classList.contains('remove')) {
+  if (event.target.classList.contains('remove')) {
     mouseChange(event.target);
   }
 });

@@ -30,8 +30,8 @@ export default class manipulateBooks {
       booksData.updateData(newBooks);
       bookAuthor.value = '';
       bookTitle.value = '';
-      setTimeout(() => {addedMsg.style.display = 'block';},300)
-      setTimeout(() => {addedMsg.style.display = 'none';},1500)
+      setTimeout(() => { addedMsg.style.display = 'block'; }, 300);
+      setTimeout(() => { addedMsg.style.display = 'none'; }, 1500);
     }
   }
 }
