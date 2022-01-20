@@ -32,6 +32,11 @@ nav {
   list-style: none;
 }
 
+nav h2 {
+  font-size: 2rem;
+  padding-left: 2em;
+}
+
 .nav-links li {
   padding: 0 3em;
 }
@@ -76,22 +81,83 @@ form button {
 }
 
 main {
-  margin-top: 7rem;
+  margin-top: 5rem;
+}
+
+.msg-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+#greet {
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 #date {
   text-align: right;
-  font-size: 1.5em;
+  font-size: 1.7em;
   font-weight: bold;
+}
+
+.modal {
+  position: fixed;
+  top: 10rem;
+  left: 25%;
+  z-index: 1;
+  width: 50%;
+  border: rgba(0, 0, 139, 0.75) solid;
+  background-color: orange;
+  border-radius: 0.8rem;
+  padding-top: 0.5rem;
+  font-family: Poppins, sans-serif;
+}
+
+.greeting {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 3.5rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.greeting span {
+  display: block;
+}
+
+.user {
+  display: block;
+  margin: 2rem auto;
+  width: 40%;
+  padding: 0.8em 1em;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+  outline: none;
+}
+
+.user:focus {
+  color: blue;
+  font-family: cursive;
+}
+
+.modal-buttons {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+.close,
+.enter {
+  padding: 0.5em 1em;
+  border-radius: 0.4rem;
+  border: 2px solid blue;
 }
 
 h1 {
   font-size: 4rem;
-}
-
-h2 {
-  font-size: 2rem;
-  padding-left: 2em;
+  text-align: center;
 }
 
 .empty-message {
@@ -106,6 +172,16 @@ h2 {
   display: none;
 }
 
+footer p {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-left: 2em;
+}
+
+.empty-message p {
+  text-align: center;
+}
+
 .add-message {
   text-align: center;
   color: rgba(0, 0, 139, 0.75);
@@ -115,6 +191,7 @@ h2 {
   font-size: 2rem;
   font-family: sans-serif;
   font-weight: bold;
+  width: 100%;
 }
 
 .books-container {
@@ -155,12 +232,6 @@ h2 {
 
 .books li:nth-child(even) .remove {
   border: 2px solid rgba(0, 0, 139, 0.75);
-}
-
-footer p {
-  font-size: 2rem;
-  font-weight: bold;
-  padding-left: 2em;
 }
 
 .books li p {

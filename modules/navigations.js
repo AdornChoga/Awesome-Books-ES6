@@ -5,7 +5,7 @@ const list = document.querySelector('#list');
 const inputField = document.querySelector('.input-field');
 const contactInfo = document.querySelector('.contact-info');
 
-export default class navigation {
+class navigation {
   static showList() {
     booksContainer.style.display = 'flex';
     inputField.style.display = 'none';
@@ -33,3 +33,5 @@ export default class navigation {
     list.classList.remove('list');
   }
 }
+
+export { navigation, booksContainer };
