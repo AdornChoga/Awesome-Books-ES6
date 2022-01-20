@@ -32,6 +32,11 @@ nav {
   list-style: none;
 }
 
+nav h2 {
+  font-size: 2rem;
+  padding-left: 2em;
+}
+
 .nav-links li {
   padding: 0 3em;
 }
@@ -155,11 +160,7 @@ main {
 
 h1 {
   font-size: 4rem;
-}
-
-h2 {
-  font-size: 2rem;
-  padding-left: 2em;
+  text-align: center;
 }
 
 .empty-message {
@@ -174,6 +175,10 @@ h2 {
   display: none;
 }
 
+.empty-message p {
+  text-align: center;
+}
+
 .add-message {
   text-align: center;
   color: rgba(0, 0, 139, 0.75);
@@ -183,6 +188,7 @@ h2 {
   font-size: 2rem;
   font-family: sans-serif;
   font-weight: bold;
+  width: 100%;
 }
 
 .books-container {
