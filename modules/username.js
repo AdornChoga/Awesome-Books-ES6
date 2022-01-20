@@ -1,4 +1,3 @@
-
 const modalContainer = document.querySelector('.modal-container');
 
 function userName() {
@@ -14,16 +13,17 @@ function userName() {
       <button type="button" class="enter">Enter</button>
     </div>
   </div>
-  `
+  `;
 }
 
 class userData {
   static fetchData() {
-    return JSON.parse(localStorage.getItem('user'))
+    return JSON.parse(localStorage.getItem('user'));
   }
+
   static setData(data) {
-    localStorage.setItem('user', JSON.stringify(data))
+    localStorage.setItem('user', JSON.stringify(data));
   }
 }
 
-export {modalContainer, userName, userData};
+export { modalContainer, userName, userData };

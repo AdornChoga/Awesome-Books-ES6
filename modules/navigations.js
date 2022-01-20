@@ -34,4 +34,4 @@ class navigation {
   }
 }
 
-export {navigation, booksContainer}
+export { navigation, booksContainer };

@@ -102,16 +102,15 @@ main {
 
 .modal {
   position: fixed;
-  background-color: white;
   top: 10rem;
   left: 25%;
   z-index: 1;
   width: 50%;
-  border:rgba(0, 0, 139, 0.75) solid;
+  border: rgba(0, 0, 139, 0.75) solid;
   background-color: orange;
   border-radius: 0.8rem;
   padding-top: 0.5rem;
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
 }
 
 .greeting {
@@ -134,7 +133,6 @@ main {
   border-radius: 1rem;
   font-size: 1.8rem;
   outline: none;
-  
 }
 
 .user:focus {
@@ -148,14 +146,13 @@ main {
   justify-content: space-between;
   margin: 0 auto;
   margin-bottom: 4rem;
-  
 }
 
-.close, .enter {
+.close,
+.enter {
   padding: 0.5em 1em;
   border-radius: 0.4rem;
   border: 2px solid blue;
-
 }
 
 h1 {
@@ -173,6 +170,12 @@ h1 {
   background-color: purple;
   color: white;
   display: none;
+}
+
+footer p {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-left: 2em;
 }
 
 .empty-message p {
@@ -229,12 +232,6 @@ h1 {
 
 .books li:nth-child(even) .remove {
   border: 2px solid rgba(0, 0, 139, 0.75);
-}
-
-footer p {
-  font-size: 2rem;
-  font-weight: bold;
-  padding-left: 2em;
 }
 
 .books li p {
