@@ -41,6 +41,10 @@ nav h2 {
   padding: 0 3em;
 }
 
+button {
+  cursor: pointer;
+}
+
 form button {
   border: 0.2rem solid rgba(0, 0, 139, 0.75);
   border-radius: 0.5rem;
@@ -138,10 +142,6 @@ main {
 .user:focus {
   color: blue;
   font-family: cursive;
-}
-
-button {
-  cursor: pointer;
 }
 
 .modal-buttons {

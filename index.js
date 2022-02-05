@@ -41,10 +41,6 @@ function libraryMessage() {
   }
 }
 
-function mouseChange(e) {
-  e.style.cursor = 'pointer';
-}
-
 function keyUp(e, btn) {
   if (e.keyCode === 13) {
     e.preventDefault();
