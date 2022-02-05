@@ -1,8 +1,9 @@
+import './index.css';
+import { DateTime } from 'luxon/src/luxon.js';
 import displayLibrary from './modules/display-books.js';
 import manipulateBooks from './modules/edit-library.js';
 import { navigation } from './modules/navigations.js';
 import booksData from './modules/books-data.js';
-import { DateTime } from './node_modules/luxon/src/luxon.js';
 import { modalContainer, userName, userData } from './modules/username.js';
 
 const addButton = document.querySelector('#add');
