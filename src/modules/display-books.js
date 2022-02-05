@@ -2,7 +2,7 @@ import booksData from './books-data.js';
 
 const listContainer = document.querySelector('.books');
 
-export default class displayLibrary {
+class displayLibrary {
   static loadBooks() {
     listContainer.innerHTML = '';
     const localBooks = booksData.fetchData();
@@ -17,3 +17,14 @@ export default class displayLibrary {
     }
   }
 }
+
+function libraryMessage() {
+  const emptyMessage = document.querySelector('.empty-message');
+  if (booksData.fetchData().length === 0) {
+    emptyMessage.style.display = 'block';
+  } else {
+    emptyMessage.style.display = 'none';
+  }
+}
+
+export { displayLibrary, libraryMessage };
