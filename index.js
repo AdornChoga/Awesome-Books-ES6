@@ -41,10 +41,6 @@ function libraryMessage() {
   }
 }
 
-function mouseChange(e) {
-  e.style.cursor = 'pointer';
-}
-
 function keyUp(e, btn) {
   if (e.keyCode === 13) {
     e.preventDefault();
@@ -134,29 +130,4 @@ listContainer.addEventListener('click', (event) => {
 goToAddPage.addEventListener('click', () => {
   navigation.showAddBook();
   libraryMessage();
-});
-
-goToAddPage.addEventListener('mouseover', (event) => {
-  mouseChange(event.target);
-});
-
-list.addEventListener('mouseover', (event) => {
-  mouseChange(event.target);
-});
-
-contact.addEventListener('mouseover', (event) => {
-  mouseChange(event.target);
-});
-goAddBook.addEventListener('mouseover', (event) => {
-  mouseChange(event.target);
-});
-
-addButton.addEventListener('mouseover', (event) => {
-  mouseChange(event.target);
-});
-
-listContainer.addEventListener('mouseover', (event) => {
-  if (event.target.classList.contains('remove')) {
-    mouseChange(event.target);
-  }
 });
