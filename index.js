@@ -135,28 +135,3 @@ goToAddPage.addEventListener('click', () => {
   navigation.showAddBook();
   libraryMessage();
 });
-
-goToAddPage.addEventListener('mouseover', (event) => {
-  mouseChange(event.target);
-});
-
-list.addEventListener('mouseover', (event) => {
-  mouseChange(event.target);
-});
-
-contact.addEventListener('mouseover', (event) => {
-  mouseChange(event.target);
-});
-goAddBook.addEventListener('mouseover', (event) => {
-  mouseChange(event.target);
-});
-
-addButton.addEventListener('mouseover', (event) => {
-  mouseChange(event.target);
-});
-
-listContainer.addEventListener('mouseover', (event) => {
-  if (event.target.classList.contains('remove')) {
-    mouseChange(event.target);
-  }
-});

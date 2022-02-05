@@ -140,6 +140,10 @@ main {
   font-family: cursive;
 }
 
+button {
+  cursor: pointer;
+}
+
 .modal-buttons {
   width: 25%;
   display: flex;
