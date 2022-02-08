@@ -4,17 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2b1476549e.js" crossorigin="anonymous"></script>
     <title>Document</title>
 <script defer src="main.js"></script></head>
 <body>
     <header>
-        <nav>
+        <nav class="nav-desktop">
             <h2>Awesome Books</h2>
-            <ul class="nav-links">
-               <li><button id="list" type="button">List</button></li>
-               <li><button id="add-book" type="button">Add Book</button></li>
-               <li><button id="contact" type="button">Contact</button></li>
+            <ul class="nav-links desktop">
+               <li><button class="list" type="button">List</button></li>
+               <li><button class="add-book" type="button">Add Book</button></li>
+               <li><button class="contact" type="button">Contact</button></li>
             </ul>
+        </nav>
+        <nav class="nav-mobile">
+            <div class="header-home">
+              <h2>Awesome Books</h2>
+              <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links mobile">
+               <li><button class="list" type="button">List</button></li>
+               <li><button class="add-book" type="button">Add Book</button></li>
+               <li><button class="contact" type="button">Contact</button></li>
+               <li><i class="fas fa-times"></i></li>
+            </ul>
+            <i class="fas fa-book"></i>
+            <i class="fas fa-plus-square"></i>
         </nav>
    </header>
     <main>
@@ -35,7 +50,7 @@
         </section>  
         <section class="input-field">
             <form>
-                <h1>Add a new book</h1>
+                <h1 class="add-book-title">Add a new book</h1>
                 <input id="title" type="text" maxlength="30" name="title" placeholder="Title" autocomplete="off" />
                 <input id="author" type="text" maxlength="30" name="author" placeholder="Author" autocomplete="off" />
                 <span class="book-added-msg">Book added successfully!</span>
