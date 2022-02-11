@@ -1,4 +1,5 @@
 {
+  "homepage": "https://adornchoga.github.io/Awesome-Books-ES6/",
   "name": "awesome-books-es6",
   "version": "1.0.0",
   "description": "",
@@ -6,7 +7,9 @@
   "scripts": {
     "watch": "webpack --watch",
     "start": "webpack serve --open",
-    "build": "webpack"
+    "build": "webpack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -18,13 +21,13 @@
   "bugs": {
     "url": "https://github.com/Asanchy/Awesome-Books-ES6/issues"
   },
-  "homepage": "https://github.com/Asanchy/Awesome-Books-ES6#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.6.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.25.4",
+    "gh-pages": "^3.2.3",
     "hint": "^6.1.9",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",

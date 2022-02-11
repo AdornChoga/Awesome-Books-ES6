@@ -16,15 +16,23 @@ function keyUp(e, btn) {
 const events = () => {
   const addButton = document.querySelector('#add');
   const listContainer = document.querySelector('.books');
-  const list = document.querySelector('#list');
-  const goAddBook = document.querySelector('#add-book');
-  const contact = document.querySelector('#contact');
+  const list = document.querySelectorAll('.list, .fa-book');
+  const goAddBook = document.querySelectorAll('.add-book, .fa-plus-square');
+  const contact = document.querySelectorAll('.contact');
   const goToAddPage = document.querySelector('.add-message');
   const bookAuthor = document.querySelector('#author');
   const bookTitle = document.querySelector('#title');
+  const menu = document.querySelector('.fa-bars');
+  const mobileMenu = document.querySelector('.nav-links.mobile');
+  const homeHeader = document.querySelector('.header-home');
+  const closeMenu = document.querySelector('.fa-times');
+  const booksIcon = document.querySelector('.fa-book');
+  const addBookIcon = document.querySelector('.fa-plus-square');
 
   window.addEventListener('load', () => {
-    list.classList.add('list');
+    list.forEach((n) => {
+      n.classList.add('list-focus');
+    });
     if (localStorage.getItem('books') === null) {
       booksData.updateData([]);
     }
@@ -37,6 +45,16 @@ const events = () => {
     }
     displayLibrary.loadBooks();
     libraryMessage();
+  });
+
+  menu.addEventListener('click', () => {
+    mobileMenu.style.display = 'flex';
+    homeHeader.style.display = 'none';
+  });
+
+  closeMenu.addEventListener('click', () => {
+    mobileMenu.style.display = 'none';
+    homeHeader.style.display = 'flex';
   });
 
   modalContainer.addEventListener('click', (event) => {
@@ -77,29 +95,41 @@ const events = () => {
     }
   });
 
-  list.addEventListener('click', () => {
-    navigation.showList();
-    libraryMessage();
+  list.forEach((n) => {
+    n.addEventListener('click', () => {
+      navigation.showList();
+      libraryMessage();
+      addBookIcon.style.display = 'block';
+      booksIcon.style.display = 'none';
+    });
   });
 
-  goAddBook.addEventListener('click', () => {
+  goAddBook.forEach((n) => {
+    n.addEventListener('click', () => {
+      navigation.showAddBook();
+      libraryMessage();
+      addBookIcon.style.display = 'none';
+      booksIcon.style.display = 'block';
+    });
+  });
+
+  contact.forEach((n) => {
+    n.addEventListener('click', () => {
+      navigation.showContactInfo();
+      libraryMessage();
+      addBookIcon.style.display = 'none';
+      booksIcon.style.display = 'block';
+    });
+  });
+
+  goToAddPage.addEventListener('click', () => {
     navigation.showAddBook();
-    libraryMessage();
-  });
-
-  contact.addEventListener('click', () => {
-    navigation.showContactInfo();
     libraryMessage();
   });
 
   listContainer.addEventListener('click', (event) => {
     manipulateBooks.removeBook(event);
     displayLibrary.loadBooks();
-    libraryMessage();
-  });
-
-  goToAddPage.addEventListener('click', () => {
-    navigation.showAddBook();
     libraryMessage();
   });
 };

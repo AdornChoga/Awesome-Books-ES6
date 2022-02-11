@@ -8,6 +8,9 @@ html {
 
 body {
   font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: skyblue;
 }
 
 header {
@@ -21,10 +24,14 @@ header {
   color: white;
 }
 
-nav {
+.nav-desktop {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.nav-mobile {
+  display: none;
 }
 
 .nav-links {
@@ -32,13 +39,10 @@ nav {
   list-style: none;
 }
 
-nav h2 {
-  font-size: 2rem;
+.nav-desktop h2 {
+  font-size: clamp(2.3vw, 1.8rem, 1.8rem);
   padding-left: 2em;
-}
-
-.nav-links li {
-  padding: 0 3em;
+  margin: 0.5em 0;
 }
 
 button {
@@ -51,41 +55,43 @@ form button {
   padding: 0.4em 1.4em;
   box-shadow: 0.4rem 0.4rem 0.2rem black;
   font-weight: bold;
-  font-size: 1.7rem;
+  font-size: max(1.3vw, 1rem);
 }
 
 .nav-links button {
   background-color: darkblue;
   color: white;
   border: none;
-  font-size: 1.6rem;
+  font-size: max(1.5vw, 1.3rem);
   font-weight: bold;
+  padding: 0 1.5em;
 }
 
-.books li {
-  border: solid red;
-  max-width: 100%;
-  display: flex;
-  justify-content: start;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  position: relative;
-  padding: 0 2em;
+footer p {
+  font-size: max(1.5vw, 1.5rem);
+  font-weight: bold;
+  padding-left: 2em;
+}
+
+.contact-info p,
+.contact-info li {
+  font-size: max(1.5vw, 1.25rem);
 }
 
 .nav-links li + li {
   border-left: 2px solid white;
 }
 
-.list,
-.add-book,
-.contact {
+.list-focus,
+.add-book-focus,
+.contact-focus {
   text-decoration: underline red 4px;
 }
 
 main {
-  margin-top: 5rem;
+  margin-top: max(4.2vw, 3.8rem);
+  width: max(100%, 35rem);
+  margin-inline: auto;
 }
 
 .msg-date {
@@ -95,13 +101,18 @@ main {
 
 #greet {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: max(1.7vw, 1.4rem);
+  text-align: left;
 }
 
-#date {
+.date {
   text-align: right;
-  font-size: 1.7em;
+  font-size: max(1.5vw, 1.3rem);
   font-weight: bold;
+}
+
+.date.mobile-date {
+  display: none;
 }
 
 .modal {
@@ -160,8 +171,10 @@ main {
 }
 
 h1 {
-  font-size: 4rem;
   text-align: center;
+  font-size: max(3.2vw, 1.8rem);
+  margin-top: 0;
+  text-decoration: underline;
 }
 
 .empty-message {
@@ -169,30 +182,27 @@ h1 {
   font-size: 2rem;
   font-family: sans-serif;
   font-weight: bold;
-  padding: 0.5em;
+  padding: max(1.5vw, 0.5rem);
   border-radius: 1rem;
   background-color: purple;
   color: white;
   display: none;
-}
-
-footer p {
-  font-size: 2rem;
-  font-weight: bold;
-  padding-left: 2em;
+  width: max(15vw, 10rem);
 }
 
 .empty-message p {
   text-align: center;
+  font-size: max(1.5vw, 1rem);
+  margin: 0.4em;
 }
 
 .add-message {
   text-align: center;
-  color: rgba(0, 0, 139, 0.75);
+  color: rgba(25, 25, 27, 0.75);
   text-decoration: underline black;
   background-color: purple;
   border: none;
-  font-size: 2rem;
+  font-size: max(1.3vw, 1rem);
   font-family: sans-serif;
   font-weight: bold;
   width: 100%;
@@ -203,12 +213,30 @@ footer p {
   flex-direction: column;
   align-items: center;
   margin-bottom: 8rem;
+  font-size: max(2vw, 2rem);
 }
 
 .books {
   list-style-type: none;
   padding: 0;
-  width: 80%;
+  width: max(100%, 35rem);
+  margin-top: 1.8rem;
+}
+
+.book {
+  border: solid rgb(201, 41, 41);
+  width: max(70%, 30rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 1em;
+  margin-inline: auto;
+}
+
+.book-info {
+  font-size: max(1.3vw, 1.2rem);
+  color: white;
 }
 
 .books li:nth-child(odd) {
@@ -223,9 +251,8 @@ footer p {
   display: block;
   align-self: center;
   border: 2px solid rgba(128, 0, 128, 0.76);
-  position: absolute;
-  right: 1rem;
-  padding: 0.6em;
+  font-size: max(1.2vw, 1rem);
+  padding: 0.5em;
   box-shadow: 0.4rem 0.4rem 0.2rem black;
   font-weight: bold;
 }
@@ -236,12 +263,6 @@ footer p {
 
 .books li:nth-child(even) .remove {
   border: 2px solid rgba(0, 0, 139, 0.75);
-}
-
-.books li p {
-  color: white;
-  font-size: 1.6rem;
-  font-weight: bold;
 }
 
 .books li p + p {
@@ -263,15 +284,16 @@ form {
 
 form input {
   margin-bottom: 2.5rem;
-  padding: 0.8em;
-  width: 100%;
+  padding: max(0.8vw, 0.5rem);
+  width: max(30vw, 20rem);
   border: 0.2rem solid rgba(0, 0, 139, 0.75);
   border-radius: 0.5rem;
   outline: none;
+  font-size: max(1.4vw, 1.5rem);
 }
 
 .book-added-msg {
-  font-size: 2rem;
+  font-size: max(1.4vw, 1.2rem);
   font-style: italic;
   color: blue;
   margin-bottom: 1rem;
@@ -298,4 +320,81 @@ footer {
   bottom: 0;
   left: 0;
   color: white;
+}
+
+.fa-bars {
+  font-size: 1.5rem;
+}
+
+.fa-plus-square {
+  display: none;
+}
+
+.fa-times {
+  font-size: 2.2rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .date.mobile-date {
+    display: block;
+  }
+
+  .date.desktop-date {
+    display: none;
+  }
+
+  .fa-plus-square {
+    color: blue;
+    position: fixed;
+    bottom: 7rem;
+    right: 1rem;
+    font-size: 3rem;
+    display: block;
+  }
+
+  .fa-book {
+    color: blue;
+    position: fixed;
+    bottom: 7rem;
+    right: 1rem;
+    font-size: 3rem;
+    display: none;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: block;
+  }
+
+  .nav-links.mobile {
+    position: relative;
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.6rem 0;
+  }
+
+  .nav-links.mobile li:last-child {
+    border: none;
+    position: absolute;
+    right: 1.2rem;
+  }
+
+  .header-home {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.2rem;
+    align-items: center;
+  }
+
+  .nav-mobile h2 {
+    font-size: 1.7rem;
+  }
+
+  #greet {
+    width: 10rem;
+  }
 }

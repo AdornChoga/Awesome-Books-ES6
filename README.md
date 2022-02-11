@@ -13,7 +13,7 @@ I also used ES6 syntax rules in the JavaScript code as well as modularized the j
 
 ## Live Demo
 
-[Live Demo Link](https://asanchy.github.io/Awesome-Books-ES6/)
+[Live Demo Link](https://adornchoga.github.io/Awesome-Books-ES6/)
 
 ## Getting Started
 
