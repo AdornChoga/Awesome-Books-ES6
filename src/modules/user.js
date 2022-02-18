@@ -12,7 +12,7 @@ class userData {
   }
 }
 
-function userName() {
+const userName = () => {
   modalContainer.innerHTML = `
   <div class="modal">
     <h1 class="greeting">
@@ -26,9 +26,9 @@ function userName() {
     </div>
   </div>
   `;
-}
+};
 
-function greetUser() {
+const greetUser = () => {
   const greet = document.querySelector('#greet');
   const { hour } = DateTime.now();
   if (hour < 12) {
@@ -38,7 +38,7 @@ function greetUser() {
   } else if (hour >= 18) {
     greet.innerHTML = `${'Good Evening'} ${userData.fetchData()[0].username}`;
   }
-}
+};
 
 export {
   modalContainer, userName, greetUser, userData,

@@ -6,7 +6,8 @@ const displayDate = () => {
   const dt = DateTime.now();
   desktopDate.innerHTML = dt.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
   mobileDate.innerHTML = `
-  <span>${dt.toLocaleString(DateTime.TIME_WITH_SECONDS)}</span> <br/>
+  <span>${dt.toLocaleString(DateTime.TIME_WITH_SECONDS)}</span>
+  <br/>
   <span>${dt.toLocaleString()}</span>`;
 };
 

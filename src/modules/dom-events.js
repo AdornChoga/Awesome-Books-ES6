@@ -6,12 +6,12 @@ import manipulateBooks from './edit-library.js';
 import { navigation } from './navigations.js';
 import booksData from './books-data.js';
 
-function keyUp(e, btn) {
+const keyUp = (e, btn) => {
   if (e.keyCode === 13) {
     e.preventDefault();
     btn.click();
   }
-}
+};
 
 const events = () => {
   const addButton = document.querySelector('#add');
