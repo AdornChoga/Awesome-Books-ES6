@@ -4,7 +4,6 @@ import {
 import { displayLibrary, libraryMessage } from './display-books.js';
 import manipulateBooks from './edit-library.js';
 import { navigation } from './navigations.js';
-import booksData from './books-data.js';
 
 const keyUp = (e, btn) => {
   if (e.keyCode === 13) {
@@ -33,11 +32,7 @@ const events = () => {
     list.forEach((n) => {
       n.classList.add('list-focus');
     });
-    if (localStorage.getItem('books') === null) {
-      booksData.updateData([]);
-    }
     if (localStorage.getItem('user') === null) {
-      userData.setData([]);
       userName();
     }
     if (localStorage.getItem('user') !== null && userData.fetchData().length > 0) {
@@ -58,19 +53,21 @@ const events = () => {
   });
 
   modalContainer.addEventListener('click', (event) => {
-    const name = document.querySelector('.user');
+    const name = document.querySelector('.user-name');
     if (event.target.classList.contains('enter')) {
       if (name.value !== '') {
-        event.path[3].innerHTML = '';
         const userdata = { username: name.value };
         const localData = userData.fetchData();
         localData.push(userdata);
         userData.setData(localData);
+        name.innerHTML = '';
+        modalContainer.style.display = 'none';
         greetUser();
       }
     }
     if (event.target.classList.contains('close')) {
-      modalContainer.innerHTML = '';
+      userData.fetchData();
+      modalContainer.style.display = 'none';
     }
   });
 
@@ -89,7 +86,7 @@ const events = () => {
   });
 
   modalContainer.addEventListener('keyup', (event) => {
-    if (event.target.classList.contains('user')) {
+    if (event.target.classList.contains('user-name')) {
       const enterName = document.querySelector('.enter');
       keyUp(event, enterName);
     }
