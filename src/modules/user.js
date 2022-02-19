@@ -4,6 +4,9 @@ const modalContainer = document.querySelector('.modal-container');
 
 class userData {
   static fetchData() {
+    if (localStorage.getItem('user') === null) {
+      localStorage.setItem('user', JSON.stringify([]));
+    }
     return JSON.parse(localStorage.getItem('user'));
   }
 
@@ -15,17 +18,17 @@ class userData {
 const userName = () => {
   modalContainer.innerHTML = `
   <div class="modal">
-    <h1 class="greeting">
-       <span>Hey there new friend.</span>
-       <span>I'm your personal library.</span>
-    </h1>
-    <input type="text" placeholder="What should I call you?" value="" class="user">
-    <div class="modal-buttons">
-      <button type="button" class="close">Close</button>
-      <button type="button" class="enter">Enter</button>
-    </div>
+    <img src="https://img.icons8.com/ios/50/000000/delete-sign--v2.png" alt="close" class="close"/>
+    <p class="greeting">
+       Hey there new friend!
+       <br />
+       I'm your personal library.
+    </p>
+    <input type="text" placeholder="What can I call you?..." value="" class="user-name">
+    <img src="https://img.icons8.com/ios-filled/50/000000/up--v2.png" alt="enter" class="enter"/>
   </div>
   `;
+  modalContainer.style.display = 'block';
 };
 
 const greetUser = () => {

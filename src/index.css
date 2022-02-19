@@ -10,12 +10,11 @@ body {
   font-family: sans-serif;
   padding: 0;
   margin: 0;
-  background-color: skyblue;
+  background-color: #a985ce52;
 }
 
 header {
-  background-color: darkblue;
-  border: solid;
+  background-color: #534877;
   position: fixed;
   width: 100%;
   top: 0;
@@ -43,6 +42,7 @@ header {
   font-size: clamp(2.3vw, 1.8rem, 1.8rem);
   padding-left: 2em;
   margin: 0.5em 0;
+  color: #00c1dd;
 }
 
 button {
@@ -59,8 +59,8 @@ form button {
 }
 
 .nav-links button {
-  background-color: darkblue;
-  color: white;
+  background-color: #534877;
+  color: #00c1dd;
   border: none;
   font-size: max(1.5vw, 1.3rem);
   font-weight: bold;
@@ -68,7 +68,8 @@ form button {
 }
 
 footer p {
-  font-size: max(1.5vw, 1.5rem);
+  margin: 0;
+  font-size: max(1.4vw, 1.4rem);
   font-weight: bold;
   padding-left: 2em;
 }
@@ -85,7 +86,7 @@ footer p {
 .list-focus,
 .add-book-focus,
 .contact-focus {
-  text-decoration: underline red 4px;
+  text-decoration: underline white 3px;
 }
 
 main {
@@ -103,71 +104,97 @@ main {
   font-weight: bold;
   font-size: max(1.7vw, 1.4rem);
   text-align: left;
+  color: #0c4063;
 }
 
 .date {
   text-align: right;
   font-size: max(1.5vw, 1.3rem);
   font-weight: bold;
+  color: #0c4063;
 }
 
 .date.mobile-date {
   display: none;
 }
 
-.modal {
+.modal-container {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 100vh;
+  width: 100%;
   position: fixed;
-  top: 10rem;
-  left: 25%;
+  top: 0;
+  left: 0;
   z-index: 1;
-  width: 50%;
-  border: rgba(0, 0, 139, 0.75) solid;
-  background-color: orange;
-  border-radius: 0.8rem;
+  backdrop-filter: blur(6px);
   padding-top: 0.5rem;
-  font-family: Poppins, sans-serif;
+}
+
+.modal {
+  width: clamp(25rem, 45vw + 1rem, 70rem);
+  border: rgba(0, 0, 139, 0.75) solid;
+  background-color: #2f83ba;
+  padding: 0.5rem 0;
+  margin-inline: auto;
+  position: relative;
 }
 
 .greeting {
-  width: 80%;
   margin: 0 auto;
-  line-height: 3.5rem;
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 2vw + 0.2rem, 3rem);
   text-align: center;
+  width: 80%;
+  font-family: monospace;
 }
 
-.greeting span {
-  display: block;
-}
-
-.user {
+.user-name {
   display: block;
   margin: 2rem auto;
-  width: 40%;
+  width: 80%;
   padding: 0.8em 1em;
   border-radius: 1rem;
   font-size: 1.8rem;
   outline: none;
+  border: none;
+  border-bottom: solid;
+  background-color: #2f83ba;
 }
 
-.user:focus {
-  color: blue;
+.user-name::placeholder {
+  color: rgb(250, 250, 250);
+  font-size: clamp(1.2rem, 1.5vw + 0.2rem, 2.5rem);
+  font-style: italic;
+}
+
+.user-name:focus {
+  color: white;
   font-family: cursive;
 }
 
 .modal-buttons {
-  width: 25%;
+  width: 80%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin: 0 auto;
   margin-bottom: 4rem;
 }
 
-.close,
 .enter {
-  padding: 0.5em 1em;
-  border-radius: 0.4rem;
-  border: 2px solid blue;
+  width: clamp(2rem, 10vw + 0.2rem, 3rem);
+  background-color: #2f83ba;
+  position: absolute;
+  bottom: 3rem;
+  right: 10%;
+  cursor: pointer;
+}
+
+.close {
+  width: clamp(2rem, 5vw, 2rem);
+  background-color: red;
+  position: absolute;
+  right: 0.3rem;
+  cursor: pointer;
 }
 
 h1 {
@@ -175,6 +202,7 @@ h1 {
   font-size: max(3.2vw, 1.8rem);
   margin-top: 0;
   text-decoration: underline;
+  color: #0c4063;
 }
 
 .empty-message {
@@ -184,7 +212,7 @@ h1 {
   font-weight: bold;
   padding: max(1.5vw, 0.5rem);
   border-radius: 1rem;
-  background-color: purple;
+  background-color: #534877;
   color: white;
   display: none;
   width: max(15vw, 10rem);
@@ -198,9 +226,9 @@ h1 {
 
 .add-message {
   text-align: center;
-  color: rgba(25, 25, 27, 0.75);
+  color: rgb(25, 25, 27);
   text-decoration: underline black;
-  background-color: purple;
+  background-color: #534877;
   border: none;
   font-size: max(1.3vw, 1rem);
   font-family: sans-serif;
@@ -224,7 +252,7 @@ h1 {
 }
 
 .book {
-  border: solid rgb(201, 41, 41);
+  border: solid #534877;
   width: max(70%, 30rem);
   display: flex;
   justify-content: space-between;
@@ -240,17 +268,16 @@ h1 {
 }
 
 .books li:nth-child(odd) {
-  background-color: rgba(0, 0, 139, 0.75);
+  background-color: #2f83ba;
 }
 
 .books li:nth-child(even) {
-  background-color: rgba(128, 0, 128, 0.75);
+  background-color: #77b5df;
 }
 
 .remove {
   display: block;
   align-self: center;
-  border: 2px solid rgba(128, 0, 128, 0.76);
   font-size: max(1.2vw, 1rem);
   padding: 0.5em;
   box-shadow: 0.4rem 0.4rem 0.2rem black;
@@ -258,11 +285,11 @@ h1 {
 }
 
 .books li:nth-child(odd) .remove {
-  border: 2px solid rgba(128, 0, 128, 0.75);
+  border: 2px solid #534877;
 }
 
 .books li:nth-child(even) .remove {
-  border: 2px solid rgba(0, 0, 139, 0.75);
+  border: 2px solid #534877;
 }
 
 .books li p + p {
@@ -313,13 +340,14 @@ form input {
 }
 
 footer {
-  background-color: darkblue;
+  background-color: #534877;
   border: 0.2rem solid black;
   position: fixed;
   width: 100%;
   bottom: 0;
   left: 0;
   color: white;
+  padding: 1em;
 }
 
 .fa-bars {
